@@ -28,6 +28,8 @@ export class CreateQuestionUseCase {
 
     await this.questionRepository.create(question)
 
-    return question
+    return {
+      question,
+    }
   }
 }

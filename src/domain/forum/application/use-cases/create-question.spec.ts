@@ -7,9 +7,9 @@ const fakeQuestionRepository: QuestionsRepository = {
 }
 
 test('create an question', async () => {
-  const Question = new CreateQuestionUseCase(fakeQuestionRepository)
+  const createQuestion = new CreateQuestionUseCase(fakeQuestionRepository)
 
-  const { question } = await Question.execute({
+  const { question } = await createQuestion.execute({
     authorId: '1',
     title: 'Nova pergunta',
     content: 'Conteudo da pergunta',
